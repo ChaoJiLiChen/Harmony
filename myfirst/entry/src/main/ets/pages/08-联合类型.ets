@@ -1,19 +1,12 @@
-// 枚举类型
-// 约定变量只能在一组数据范围内选择，提高可维护性 相比较于联合类型，每个数据可以有描述，方便了用户的理解和选择
-// enum 枚举名 {
-//   常量1 = 值,
-//   常量1 = 值,
-//   ……
-// }
+// 联合类型
 
-enum ThemeColor {
-  Red = '#ff0f29',
-  Orange = '#ff7100',
-  Green = '#30b30e'
-}
+let judge: number | string = 100
+judge = 'A+'
+console.log('年终考试评价：', judge)
 
-let color: ThemeColor = ThemeColor.Red
-console.log('color：',color)
+//联合类型还可以将变量值约定在一组数据范围内进行选择
+// 性别 男 女 保密
+let gender: 'man' | 'woman' | 'secret' = 'man'
 
 @Entry
 @Component
